@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN">
+
+    <appenders>
+        <File name="Exceptions" fileName="ExceptionsDebuggingAndTesting/homework_2/SPBMetro/src/main/resources/logs/exceptions.log" immediateFlush="true">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+        <File name="Search" fileName="ExceptionsDebuggingAndTesting/homework_2/SPBMetro/src/main/resources/logs/search.log" immediateFlush="true">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+        <File name="InputErrors" fileName="ExceptionsDebuggingAndTesting/homework_2/SPBMetro/src/main/resources/logs/input_errors.log" immediateFlush="true">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+    </appenders>
+
+    <loggers>
+        <logger name="searchLogger" level="info">
+            <appender-ref ref="Search" level="info"/>
+        </logger>
+        <logger name="inputErrorLogger" level="info">
+            <appender-ref ref="InputErrors" level="info"/>
+        </logger>
+        <root level="error">
+            <appender-ref ref="Exceptions" level="error"/>
+        </root>
+    </loggers>
+
+</configuration>
